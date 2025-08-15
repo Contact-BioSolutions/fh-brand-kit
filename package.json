@@ -22,7 +22,11 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "process-assets": "node scripts/process-assets.js",
+    "validate-assets": "node scripts/process-assets.js --validate-only",
+    "generate-tokens": "node scripts/generate-tokens.js",
+    "optimize-assets": "node scripts/optimize-assets.js"
   },
   "keywords": [
     "design-system",

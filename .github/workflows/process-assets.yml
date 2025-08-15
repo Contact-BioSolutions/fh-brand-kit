@@ -1,0 +1,123 @@
+name: Process Brand Assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Asset category to process (leave empty for all)'
+        required: false
+        default: ''
+        type: choice
+        options:
+        - ''
+        - logos
+        - colors
+        - typography
+        - icons
+        - imagery
+  push:
+    paths:
+      - 'brand-assets-inbox/**'
+
+jobs:
+  process-assets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Process brand assets
+        run: |
+          if [ -n "${{ github.event.inputs.category }}" ]; then
+            npm run process-assets -- --category=${{ github.event.inputs.category }}
+          else
+            npm run process-assets
+          fi
+
+      - name: Generate design tokens
+        run: npm run generate-tokens
+
+      - name: Optimize assets
+        run: npm run optimize-assets
+
+      - name: Build package
+        run: npm run build
+
+      - name: Run type check
+        run: npm run typecheck
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            Process brand assets and update design tokens
+            
+            - Processed assets from brand-assets-inbox
+            - Updated design tokens and CSS custom properties
+            - Optimized SVGs and images
+            - Generated type definitions
+            
+            🤖 Automated asset processing
+          title: 'Brand Assets Update - ${{ github.event.head_commit.message || github.event.inputs.category || "All Categories" }}'
+          body: |
+            ## Brand Assets Processed
+            
+            This PR contains updates from processing brand assets in the `brand-assets-inbox/` directory.
+            
+            ### Changes Made
+            - ✅ Processed and organized brand assets
+            - ✅ Updated design tokens (`src/tokens/`)
+            - ✅ Generated CSS custom properties
+            - ✅ Optimized SVGs and images
+            - ✅ Updated TypeScript definitions
+            
+            ### Review Checklist
+            - [ ] Visual review of updated assets
+            - [ ] Verify color accuracy in design tokens
+            - [ ] Test integration in consuming projects
+            - [ ] Check accessibility compliance
+            - [ ] Validate brand guidelines compliance
+            
+            ### Logs and Reports
+            Check the workflow logs for detailed processing information and optimization reports.
+            
+            **Category**: ${{ github.event.inputs.category || 'All' }}
+            **Triggered by**: ${{ github.event_name }}
+          branch: brand-assets-update-${{ github.run_number }}
+          delete-branch: true
+
+      - name: Upload processing logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: processing-logs
+          path: logs/
+          retention-days: 30
+
+      - name: Comment on issue if no changes
+        if: steps.changes.outputs.changes == 'false' && github.event_name == 'workflow_dispatch'
+        run: |
+          echo "No changes detected after processing assets. Assets may already be up to date or no new assets were found in brand-assets-inbox/."

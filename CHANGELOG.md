@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **FireHawk Brand Integration**: Complete brand assets and color system
-- **SVG Icon Library**: 9 optimized icons based on FireHawk graphic elements
+- **SVG Icon Library**: 6 optimized icons based on actual FireHawk graphic elements
 - **Brand Asset Processing**: Automated system for managing brand assets
 - **Comprehensive Documentation**: Complete brand guidelines and usage instructions
 
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **CSS Custom Properties**: RGB values for dynamic theming
 - **Tailwind Integration**: `primary-*`, `secondary-*`, `accent-*` color classes
 
-#### New Icons
+#### New Icons (Based on Actual FireHawk Assets)
 - **UI Icons**: 
   - `chevron-down-01.svg` - FireHawk chevron with angular wing design
   - `chevron-down-02.svg` - Alternative chevron variation
@@ -30,9 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `rounded-shape-03.svg` - Additional rounded variation
 - **Industry Icons**:
   - `target.svg` - Precision agriculture and goal achievement
-  - `leaf.svg` - Plant and growth themes
-  - `seed.svg` - Agricultural foundation and potential
-  - `growth.svg` - Progress and development
 
 #### Brand Asset System
 - **Asset Inbox**: `brand-assets-inbox/` for organized asset submission
@@ -53,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Package Exports**: Added icon assets and improved type definitions
 
 ### Technical Improvements
-- **Asset Optimization**: 9 SVG icons optimized with 1.7% average file size reduction
+- **Asset Optimization**: 6 SVG icons optimized based on actual FireHawk graphics
 - **Type Safety**: Complete TypeScript definitions for all design tokens
 - **Build Performance**: Improved build pipeline with asset processing integration
 - **Quality Gates**: Enhanced validation and testing workflows

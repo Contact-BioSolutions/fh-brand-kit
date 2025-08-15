@@ -3,27 +3,27 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  /* FireHawk Brand Colors */
-  --cb-primary-50: 240 248 245;
-  --cb-primary-500: 45 90 71;
-  --cb-primary-600: 38 80 63;
-  --cb-primary-700: 31 70 54;
+  /* Brand Colors */
+  --cb-primary-50: 240 249 255;
+  --cb-primary-500: 14 165 233;
+  --cb-primary-600: 2 132 199;
+  --cb-primary-700: 3 105 161;
   
-  --cb-secondary-50: 254 245 241;
-  --cb-secondary-500: 245 90 43;
-  --cb-secondary-600: 232 67 20;
-  --cb-secondary-700: 210 51 12;
+  --cb-secondary-50: 248 250 252;
+  --cb-secondary-500: 100 116 139;
+  --cb-secondary-600: 71 85 105;
+  --cb-secondary-700: 51 65 85;
   
-  --cb-accent-50: 240 253 244;
-  --cb-accent-500: 34 197 94;
-  --cb-accent-600: 22 163 74;
-  --cb-accent-700: 21 128 61;
+  --cb-accent-50: 254 252 232;
+  --cb-accent-500: 234 179 8;
+  --cb-accent-600: 202 138 4;
+  --cb-accent-700: 161 98 7;
   
   /* Semantic Colors */
-  --cb-success: 46 125 50;
-  --cb-warning: 245 124 0;
-  --cb-error: 198 40 40;
-  --cb-info: 21 101 192;
+  --cb-success: 34 197 94;
+  --cb-warning: 245 158 11;
+  --cb-error: 239 68 68;
+  --cb-info: 59 130 246;
   
   /* Typography */
   --cb-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

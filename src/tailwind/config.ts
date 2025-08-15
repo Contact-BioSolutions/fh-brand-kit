@@ -6,9 +6,14 @@ export const tailwindConfig = {
   theme: {
     extend: {
       colors: {
-        ...colors.brand,
-        ...colors.semantic,
+        primary: colors.brand.primary,
+        secondary: colors.brand.secondary,
+        accent: colors.brand.accent,
         neutral: colors.neutral,
+        success: colors.semantic.success,
+        warning: colors.semantic.warning,
+        error: colors.semantic.error,
+        info: colors.semantic.info,
       },
       fontFamily: typography.fontFamily,
       fontSize: typography.fontSize,

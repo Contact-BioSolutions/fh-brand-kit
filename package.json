@@ -1,0 +1,51 @@
+{
+  "name": "@contact-biosolutions/fh-brand-kit",
+  "version": "0.1.0",
+  "description": "Contact BioSolutions brand kit with design tokens and Tailwind CSS configuration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/tailwind",
+    "src/css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./tailwind/preset": "./src/tailwind/preset.js",
+    "./tailwind/config": "./src/tailwind/config.js",
+    "./css/base.css": "./src/css/base.css"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "design-system",
+    "tailwindcss",
+    "brand-kit",
+    "contact-biosolutions"
+  ],
+  "author": "Contact BioSolutions",
+  "license": "UNLICENSED",
+  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Contact-BioSolutions/fh-brand-kit.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}

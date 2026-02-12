@@ -7,7 +7,7 @@
  * - FIREHAWK ORANGE (PMS 1655C): #EB5412 (R235 G84 B18)
  *
  * Secondary Colors:
- * - PALE GREEN (PMS 365C): #CAE098 (R202 G222 B152)
+ * - PALE GREEN (PMS 365C): #CADE98 (R202 G222 B152)
  * - OFF WHITE (PMS COOL GRAY 1C): #F7F4EE (R247 G244 B238)
  * - DANDELION YELLOW (PMS 7548C): #FBBC00 (R251 G188 B0)
  */
@@ -17,7 +17,7 @@ export const colors = {
     // Official 2025 Brand Colors (PMS reference codes)
     deepGreen: '#10392C',    // DEEP GREEN (PMS 627C) - Primary - R16 G57 B44
     orange: '#EB5412',        // FIREHAWK ORANGE (PMS 1655C) - Primary - R235 G84 B18
-    paleGreen: '#CAE098',     // PALE GREEN (PMS 365C) - Secondary - R202 G222 B152
+    paleGreen: '#CADE98',     // PALE GREEN (PMS 365C) - Secondary - R202 G222 B152
     offWhite: '#F7F4EE',      // OFF WHITE (PMS COOL GRAY 1C) - Secondary - R247 G244 B238
     yellow: '#FBBC00',        // DANDELION YELLOW (PMS 7548C) - Secondary - R251 G188 B0
 

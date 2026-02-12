@@ -3,32 +3,59 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  /* FireHawk Brand Colors */
-  --cb-primary-50: 240 248 245;
-  --cb-primary-500: 45 90 71;
-  --cb-primary-600: 38 80 63;
-  --cb-primary-700: 31 70 54;
-  
-  --cb-secondary-50: 254 245 241;
-  --cb-secondary-500: 245 90 43;
-  --cb-secondary-600: 232 67 20;
-  --cb-secondary-700: 210 51 12;
-  
-  --cb-accent-50: 240 253 244;
-  --cb-accent-500: 34 197 94;
-  --cb-accent-600: 22 163 74;
-  --cb-accent-700: 21 128 61;
-  
-  /* Semantic Colors */
-  --cb-success: 46 125 50;
-  --cb-warning: 245 124 0;
-  --cb-error: 198 40 40;
-  --cb-info: 21 101 192;
-  
-  /* Typography */
-  --cb-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --cb-font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
-  --cb-font-mono: 'JetBrains Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  /* FireHawk Brand Colors - 2025 Official (Chase Design Group)
+   * RGB values derived from token hex values in src/tokens/colors.ts
+   */
+
+  /* Official brand colors */
+  --cb-brand-deep-green: 16 57 44;         /* #10392C (PMS 627C) */
+  --cb-brand-orange: 235 84 18;            /* #EB5412 (PMS 1655C) */
+  --cb-brand-pale-green: 202 222 152;      /* #CADE98 (PMS 365C) */
+  --cb-brand-off-white: 247 244 238;       /* #F7F4EE (PMS Cool Gray 1C) */
+  --cb-brand-yellow: 251 188 0;            /* #FBBC00 (PMS 7548C) */
+
+  /* Primary scale (Deep Green based) */
+  --cb-primary-50: 232 242 240;            /* #e8f2f0 */
+  --cb-primary-100: 198 224 218;           /* #c6e0da */
+  --cb-primary-200: 160 205 194;           /* #a0cdc2 */
+  --cb-primary-300: 122 185 170;           /* #7ab9aa */
+  --cb-primary-400: 94 167 152;            /* #5ea798 */
+  --cb-primary-500: 66 150 134;            /* #429686 */
+  --cb-primary-600: 60 134 126;            /* #3c867e */
+  --cb-primary-700: 51 115 115;            /* #337373 */
+  --cb-primary-800: 43 97 105;             /* #2b6169 */
+  --cb-primary-900: 16 57 44;              /* #10392C */
+
+  /* Secondary scale (FireHawk Orange based) */
+  --cb-secondary-50: 254 245 240;          /* #fef5f0 */
+  --cb-secondary-100: 253 230 218;         /* #fde6da */
+  --cb-secondary-200: 252 213 194;         /* #fcd5c2 */
+  --cb-secondary-300: 250 196 170;         /* #fac4aa */
+  --cb-secondary-400: 248 183 152;         /* #f8b798 */
+  --cb-secondary-500: 247 170 134;         /* #f7aa86 */
+  --cb-secondary-600: 246 154 110;         /* #f69a6e */
+  --cb-secondary-700: 243 133 81;          /* #f38551 */
+  --cb-secondary-800: 241 111 54;          /* #f16f36 */
+  --cb-secondary-900: 235 84 18;           /* #EB5412 */
+
+  /* Accent scale (Deep Green for CTAs) */
+  --cb-accent-50: 232 242 240;             /* #e8f2f0 */
+  --cb-accent-500: 16 57 44;               /* #10392C */
+  --cb-accent-600: 10 45 35;               /* #0a2d23 */
+  --cb-accent-700: 8 31 26;                /* #081f1a */
+
+  /* Semantic colors */
+  --cb-success: 34 197 94;                 /* #22c55e */
+  --cb-warning: 245 158 11;                /* #f59e0b */
+  --cb-error: 220 38 38;                   /* #dc2626 */
+  --cb-info: 59 130 246;                   /* #3b82f6 */
+
+  /* Typography - Roboto family (web fonts per brand guide p.16) */
+  --cb-font-heading: 'Roboto Condensed', sans-serif;
+  --cb-font-subheading: 'Roboto Serif', serif;
+  --cb-font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --cb-font-serif: 'Roboto Serif', Georgia, 'Times New Roman', serif;
+  --cb-font-mono: monospace;
 }
 
 /* Base styles */
@@ -40,27 +67,27 @@ body {
 
 /* Utility classes for brand consistency */
 .cb-brand-primary {
-  color: rgb(var(--cb-primary-600));
+  color: rgb(var(--cb-primary-900));
 }
 
 .cb-brand-secondary {
-  color: rgb(var(--cb-secondary-600));
+  color: rgb(var(--cb-secondary-900));
 }
 
 .cb-brand-accent {
-  color: rgb(var(--cb-accent-600));
+  color: rgb(var(--cb-accent-500));
 }
 
 .cb-bg-brand-primary {
-  background-color: rgb(var(--cb-primary-600));
+  background-color: rgb(var(--cb-primary-900));
 }
 
 .cb-bg-brand-secondary {
-  background-color: rgb(var(--cb-secondary-600));
+  background-color: rgb(var(--cb-secondary-900));
 }
 
 .cb-bg-brand-accent {
-  background-color: rgb(var(--cb-accent-600));
+  background-color: rgb(var(--cb-accent-500));
 }
 
 /* Focus styles for accessibility */

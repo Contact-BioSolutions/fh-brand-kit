@@ -1,0 +1,148 @@
+/**
+ * FireHawk Brand Kit — Tailwind CSS v4 Theme
+ * Source: Chase Design Group (July 2025)
+ *
+ * Usage in consuming projects:
+ *   @import 'tailwindcss';
+ *   @import '@contact-biosolutions/firehawk-brand-kit/theme.css';
+ */
+
+@theme {
+  /* ============================================
+   * Brand Colors — Official 2025 Guidelines
+   * ============================================ */
+
+  /* Primary Brand Colors */
+  --color-brand-deep-green: #10392C;    /* PMS 627C */
+  --color-brand-orange: #EB5412;        /* PMS 1655C */
+  --color-brand-pale-green: #CADE98;    /* PMS 365C */
+  --color-brand-off-white: #F7F4EE;     /* PMS Cool Gray 1C */
+  --color-brand-yellow: #FBBC00;        /* PMS 7548C */
+
+  /* Primary Scale — Deep Green based */
+  --color-primary-50: #e8f2f0;
+  --color-primary-100: #c6e0da;
+  --color-primary-200: #a0cdc2;
+  --color-primary-300: #7ab9aa;
+  --color-primary-400: #5ea798;
+  --color-primary-500: #429686;
+  --color-primary-600: #3c867e;
+  --color-primary-700: #337373;
+  --color-primary-800: #2b6169;
+  --color-primary-900: #10392C;
+
+  /* Secondary Scale — FireHawk Orange based */
+  --color-secondary-50: #fef5f0;
+  --color-secondary-100: #fde6da;
+  --color-secondary-200: #fcd5c2;
+  --color-secondary-300: #fac4aa;
+  --color-secondary-400: #f8b798;
+  --color-secondary-500: #f7aa86;
+  --color-secondary-600: #f69a6e;
+  --color-secondary-700: #f38551;
+  --color-secondary-800: #f16f36;
+  --color-secondary-900: #EB5412;
+
+  /* Accent Scale — Deep Green for CTAs */
+  --color-accent-50: #e8f2f0;
+  --color-accent-100: #c6e0da;
+  --color-accent-200: #a0cdc2;
+  --color-accent-300: #7ab9aa;
+  --color-accent-400: #5ea798;
+  --color-accent-500: #10392C;
+  --color-accent-600: #0a2d23;
+  --color-accent-700: #081f1a;
+  --color-accent-800: #061612;
+  --color-accent-900: #06191a;
+
+  /* Neutral Scale */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+
+  /* Semantic Colors */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-200: #bfdbfe;
+  --color-info-300: #93c5fd;
+  --color-info-400: #60a5fa;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+  --color-info-800: #1e40af;
+  --color-info-900: #1e3a8a;
+
+  /* ============================================
+   * Typography — Roboto Family (Web Fonts)
+   * ============================================ */
+
+  --font-heading: 'Roboto Condensed', sans-serif;
+  --font-subheading: 'Roboto Serif', serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Roboto Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: monospace;
+
+  /* ============================================
+   * Animations
+   * ============================================ */
+
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+  --animate-slide-down: slide-down 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-down {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

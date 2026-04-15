@@ -50,3 +50,6 @@ pnpm-lock.yaml
 # Note: package-lock.json is tracked for consistent CI/CD builds
 
 inbox/
+
+# Claude Code local settings
+.claude/settings.local.json

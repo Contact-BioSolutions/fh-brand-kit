@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm add:*)",
+      "Bash(npm remove:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)"
+    ],
+    "deny": [
+      "Write(/home/richard/firehawk/fh-health-safety/**)",
+      "Edit(/home/richard/firehawk/fh-health-safety/**)",
+      "Write(/home/richard/firehawk/fh-regulatory/**)",
+      "Edit(/home/richard/firehawk/fh-regulatory/**)",
+      "Bash(psql:*)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~:*)",
+      "Bash(rm -rf /home/*)"
+    ]
+  }
+}

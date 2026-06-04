@@ -89,7 +89,7 @@ src/
 
 This package is a shared dependency. Changes here affect:
 
-- **firehawk-site** (Next.js) -- uses Tailwind preset and CSS base
+- **agronomy-site** (Next.js) -- uses Tailwind preset and CSS base
 - **firehawk-cms** (Sanity Studio) -- uses color tokens
 
 Test downstream builds after any token or preset changes.
